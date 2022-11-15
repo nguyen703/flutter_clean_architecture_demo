@@ -9,7 +9,7 @@ class AppTheme {
   static final Color _lightPrimaryColor = Colors.blueGrey.shade50;
   static final Color _lightPrimaryVariantColor = Colors.blueGrey.shade800;
   static final Color _lightOnPrimaryColor = Colors.blueGrey.shade200;
-  static const Color _lightTextColorPrimary = Colors.black;
+  static const Color _lightTextColorPrimary = Colors.black87;
   static const Color _appbarColorLight = Colors.blue;
 
   static final Color _darkPrimaryColor = Colors.blueGrey.shade900;
@@ -49,12 +49,12 @@ class AppTheme {
   static final TextStyle _darkThemeHeadingTextStyle =
       _lightHeadingText.copyWith(color: _darkTextColorPrimary);
 
-  static final TextStyle _darkThemeBodyeTextStyle =
+  static final TextStyle _darkThemeBodyTextStyle =
       _lightBodyText.copyWith(color: _darkTextColorPrimary);
 
   static final TextTheme _darkTextTheme = TextTheme(
     headline1: _darkThemeHeadingTextStyle,
-    bodyText1: _darkThemeBodyeTextStyle,
+    bodyText1: _darkThemeBodyTextStyle,
   );
 
   // *****************
@@ -88,4 +88,6 @@ class AppTheme {
         primaryContainer: _darkPrimaryVariantColor,
       ),
       textTheme: _darkTextTheme);
+
+  static const double appBarHeight = 60;
 }
