@@ -44,8 +44,7 @@ class AdvicePage extends StatelessWidget {
                           color: themeData.colorScheme.secondary);
                     }
                     if (state is AdviceLoadedState) {
-                      return const AdviceField(
-                          advice: ''' "Hello darkness my old friend" ''');
+                      return AdviceField(advice: state.advice);
                     }
                     if (state is AdviceErrorState) {
                       return const ErrorMessage(
