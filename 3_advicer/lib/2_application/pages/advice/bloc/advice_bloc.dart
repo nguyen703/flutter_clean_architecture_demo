@@ -8,10 +8,10 @@ part 'advice_event.dart';
 part 'advice_state.dart';
 
 class AdviceBloc extends Bloc<AdviceEvent, AdviceState> {
-  AdviceBloc() : super(AdviceInitial()) {
-    // Import multi use cases if needed
-    final AdviceUseCases adviceUseCases = AdviceUseCases();
+  // Import multi use cases if needed
+  final AdviceUseCases adviceUseCases;
 
+  AdviceBloc({required this.adviceUseCases}) : super(AdviceInitial()) {
     // Handle BLoC events
     on<AdviceRequestedEvent>((event, emit) async {
       emit(AdviceLoadingState());
